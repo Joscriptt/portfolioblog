@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: RubikBold;
+  src: url("../public//font//Rubik-Bold.ttf");
+}
+@font-face {
+  font-family: RubikExtraBold;
+  src: url("../public//font//Rubik-ExtraBold.ttf");
+}
+@font-face {
+  font-family: RubikLight;
+  src: url("../public//font//Rubik-Light.ttf");
+}
+@font-face {
+  font-family: RubikMedium;
+  src: url("../public//font//Rubik-Medium.ttf");
+}
+@font-face {
+  font-family: RubikRegular;
+  src: url("../public//font//Rubik-Regular.ttf");
+}
+
+@layer base {
+  body {
+    @apply bg-[#171717] transition-all ease-in duration-200;
+  }
+}
+
+/* @layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+} */
+
+.btn-shine {
+  padding: 12px 0;
+  padding-right: 7px;
+  background: linear-gradient(to right, #292929 0, #7d7b7b 10%, #292929 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 10s infinite linear;
+  /* animation-delay: 10s; */
+  animation-fill-mode: forwards;
+  -webkit-text-size-adjust: none;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  90% {
+    background-position: 1080px;
+  }
+  100% {
+    background-position: 1080px;
+  }
+}
